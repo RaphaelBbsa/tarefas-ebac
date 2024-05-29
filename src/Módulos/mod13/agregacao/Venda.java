@@ -42,4 +42,17 @@ public class Venda { //usando uma HashSet pois meus produtos não se repetem!
     public void add(Produto produto){ //criei o metodo add manualmente para adiconar na minha HashSet
         this.produtos.add(produto);
     }
+
+    public void concretizarVenda(){
+        System.out.println("Comprador: "+ comprador.getNome());
+        System.out.println("Comprou os itens: ");
+        for(Produto loop : produtos){
+            System.out.println("Nome produto: "+ loop.getNome()+ " Valor produto "+ loop.getPreco());
+        }
+
+    }
+
+    public void cancelarVenda(){
+        System.out.println("Venda cancelada!");
+    }
 }

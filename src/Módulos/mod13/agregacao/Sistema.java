@@ -10,7 +10,26 @@ public class Sistema { //eu dou o return vendedor e return produto para eles nao
 
         Vendedor jobson = criarVendedor("Jobson Soares", 0.1d);
         Vendedor raphael = criarVendedor("Raphael Porto", 0.1d);
+
+        Comprador compradorAleatorio = criarComprador("Não identificado", 1899d);
+
+        Venda venda = new Venda();
+        venda.setVendedor(raphael);
+        venda.setComprador(compradorAleatorio);
+        venda.add(produto1);
+        venda.add(produto2);
+
+        venda.concretizarVenda();
+
+
+
+
         
+    }
+
+    private static Comprador criarComprador(String nome, Double verba) {
+        Comprador comprador = new Comprador(nome, verba); //aqui eu faço com o construtor lá na minha classe, tornando isso mais fácil
+        return comprador;
     }
 
     private static Vendedor criarVendedor(String nome, Double comissao) {
