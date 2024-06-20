@@ -1,4 +1,6 @@
 package Módulos.mod12.Arrays;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import java.util.Scanner;
 
 //não posso usar o metodo convert dentro da Main
@@ -22,7 +24,6 @@ public class BubbleSortDinamico {
         System.out.println();
 
 
-
 }
     private static int[] convert(String [] vetStr){
         int [] numeros = new int[vetStr.length];
@@ -31,4 +32,7 @@ public class BubbleSortDinamico {
         }
         return numeros;
     }
-    }
+
+
+
+}
