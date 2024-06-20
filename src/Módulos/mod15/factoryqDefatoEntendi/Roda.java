@@ -1,4 +1,7 @@
 package Módulos.mod15.factoryqDefatoEntendi;
 
-public class Roda {
+public abstract class Roda {
+    public abstract String getDescricao();
+
+
 }

@@ -1,5 +1,6 @@
 package Módulos.mod15.factoryqDefatoEntendi;
 
-public class Som {
+public abstract class Som {
+    public abstract String getDescricao();
 
 }

@@ -20,5 +20,8 @@ public class TesteFactory {
         Carro c1 = montarCarro("luxo");
         Carro c2 = montarCarro("popular");
         System.out.println("END");
+
+        c1.exibirDetalhes();
+        c2.exibirDetalhes();
     }
 }

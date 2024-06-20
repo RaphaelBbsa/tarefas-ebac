@@ -20,4 +20,8 @@ public class Carro {
     }
 
     Som som;
+
+    public void exibirDetalhes (){
+        System.out.println("Carro com "+ roda.getDescricao() + " e " + som.getDescricao());
+    }
 }
