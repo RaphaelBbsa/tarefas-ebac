@@ -42,6 +42,19 @@ public class Exemplos {
         });
         System.out.println(returnLong);
 
+        Runnable hello = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Olá rapha");
+            }
+        };
+
+        hello.run();
+        Thread thread = new Thread(hello);
+        thread.start();
+
+
+
         }
     private static Long calcular (Long t, Long u, BiFunction<Long,Long,Long> function){
         return function.apply(t, u);
