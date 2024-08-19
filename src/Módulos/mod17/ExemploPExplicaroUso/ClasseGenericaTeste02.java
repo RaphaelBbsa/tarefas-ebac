@@ -5,7 +5,6 @@ import Módulos.mod17.ExemploPExplicaroUso.service.RentalService;
 import java.util.ArrayList;
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.T;
 
 public class ClasseGenericaTeste02 {
     public static void main(String[] args) {
