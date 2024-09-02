@@ -6,15 +6,17 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
-    public static void main(String[] args) {
 
-        List<Atletas> atletas = Arrays.asList(new Atletas("Raphael","Futebol","Masculino","Brasileiro"),
+
+       private static List<Atletas> atletas = Arrays.asList(new Atletas("Raphael","Futebol","Masculino","Brasileiro"),
                         new Atletas("Lara","Futebol","Feminino","Brasileira"),
                         new Atletas("Joana","Tenis","Feminino","Eslováquia"),
                         new Atletas("Sérgio","Atletismo","Masculino","Romeno"));
+    public static void main(String[] args) {
 
         Stream<Atletas> listaAtletas = atletas.stream();
 
+        List<Atletas> listaMulheres = getListaMulheres();
         listaAtletas.forEach(System.out::println);
 
 
@@ -25,12 +27,18 @@ public class Main {
         System.out.println("Lista com apenas mulheres: ");
         System.out.println(ListMulher);
 
+
+
         //sem o forEach
 
        // for(Atletas a : atletas){
           //  System.out.println(a);
         }
-
+    public static List<Atletas> getListaMulheres (){
+        return  atletas.stream()
+                .filter(at -> at.getSexo().equals("Feminino"))
+                .collect(Collectors.toList());
+    }
 
     }
 
